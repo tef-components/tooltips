@@ -1,3 +1,3 @@
-# TEF buttons
+# TEF headers
 
-Preview all buttons: [http://tef-components.github.io/buttons/index.html](http://tef-components.github.io/buttons/index.html)
+Preview headers: [http://tef-components.github.io/headers/index.html](http://tef-components.github.io/headers/index.html)

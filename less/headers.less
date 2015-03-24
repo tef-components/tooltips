@@ -1,0 +1,90 @@
+//
+// TEF components - heders
+//
+
+@import "../../utils/less/utils.less";
+
+.tef-header {
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 32px;
+    padding: 0 32px 0 56px;
+    background: @headerNav;
+    color: @headerText;
+    z-index: 98;
+  }
+
+  ul {
+    display: none;
+    position: absolute;
+    top: 32px;
+    right: 0;
+    background: white;
+    box-shadow: @shadow;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  li {
+    color: @headerNav;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 9px 40px;
+    border-bottom: 1px solid @grey1;
+    text-align: right;
+
+
+    a {
+      color: @headerNav;
+      text-decoration: none;
+    }
+
+    [data-icon] {
+      position: relative;
+      top: 2px;
+      color: @headerIcon;
+      padding-left: 4px;
+      font-size: 16px;
+    }
+  }
+
+  .tef-close,
+  .tef-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 32px;
+    height: 32px;
+    width: 40px;
+    border: none;
+    background: white;
+    color: @headerNav;
+    font-size: 25px;
+    z-index: 99;
+    cursor: pointer;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  .tef-menu {
+    background: @headerNav;
+    color: white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: white;
+      color: @headerNav;
+    }
+  }
+}
