@@ -2,19 +2,56 @@
 // TEF components - heders
 //
 
-@import "../../utils/less/utils.less";
+@import "../../utils/less/mixins.less";
 
 .tef-header {
+  position: relative;
+  height: 138px;
+  background: url(../images/bg.jpg) left bottom no-repeat;
+
+  h1 {
+    display: none;
+    position: absolute;
+    bottom: 22px;
+    right: 32px;
+    color: #fff;
+    height: 34px;
+    width: 200px;
+    margin: 0;
+    font-size: 32px;
+    font-weight: 300;
+
+    .media-min-xs({ display: block; });
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  h2 {
+    position: absolute;
+    bottom: 26px;
+    left: 24px;
+    background: url(../images/logo.png) no-repeat;
+    height: 34px;
+    width: 200px;
+    margin: 0;
+    font-size: 0;
+  }
+
   nav {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     height: 32px;
-    padding: 0 32px 0 56px;
+    padding: 0 32px;
     background: @headerNav;
     color: @headerText;
     z-index: 98;
+
+    .media-min-xs({ position: relative; });
   }
 
   ul {
@@ -28,28 +65,58 @@
     padding: 0;
     margin: 0;
 
+    .media-min-md({
+      display: block;
+      background: transparent;
+      top: 0;
+      right: 22px;
+      box-shadow: none;
+    });
+
     &.show {
       display: block;
     }
   }
 
   li {
-    color: @headerNav;
+    color: @headerReverse;
     font-size: 12px;
     line-height: 14px;
     padding: 9px 40px;
     border-bottom: 1px solid @grey1;
     text-align: right;
 
+    .media-min-md({
+      display: inline-block;
+      color: white;
+      border: none;
+      line-height: 32px;
+      padding: 0 10px;
+    });
+
+    span {
+      position: relative;
+      top: -2px;
+    }
 
     a {
-      color: @headerNav;
+      color: @headerReverse;
       text-decoration: none;
+
+      .media-min-md({
+        color: white;
+      });
+
+      &:hover,
+      &:focus,
+      &:active {
+        span {
+          text-decoration: underline;
+        }
+      }
     }
 
     [data-icon] {
-      position: relative;
-      top: 2px;
       color: @headerIcon;
       padding-left: 4px;
       font-size: 16px;
@@ -58,7 +125,6 @@
 
   .tef-close,
   .tef-menu {
-    display: none;
     position: absolute;
     top: 0;
     right: 32px;
@@ -66,25 +132,32 @@
     width: 40px;
     border: none;
     background: white;
-    color: @headerNav;
+    color: @headerReverse;
     font-size: 25px;
     z-index: 99;
     cursor: pointer;
 
     &.show {
       display: block;
+      .media-min-md({ display: none; });
     }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: white;
+      color: @headerReverse;
+    }
+  }
+
+  .tef-close {
+    display: none;
   }
 
   .tef-menu {
     background: @headerNav;
     color: white;
 
-    &:hover,
-    &:focus,
-    &:active {
-      background: white;
-      color: @headerNav;
-    }
+    .media-min-md({ display: none; });
   }
 }

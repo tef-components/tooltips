@@ -27,6 +27,9 @@
         border-radius: 4px;
       }
       /* demo page only */
+      .tef-header {
+        margin-top: 20px;
+      }
       .tef-header nav {
         position: relative;
       }
@@ -36,7 +39,7 @@
   <body>
     <div class="tef-wrapper">
       <header data-columns="2" data-columns-xs="1">
-        <h1>Modals</h1>
+        <h1>Headers</h1>
         <div>
           <label>Change theme</label>
           <div class="tef-dropdown" data-icon="angle_down">
@@ -50,20 +53,36 @@
         </div>
       </header>
 
-      <h2>default</h2>
       <header class="tef-header">
         <nav>
-          <button id="show-menu-btn" onclick="showMenu()" class="tef-menu show" data-icon="menu"></button>
+          <button id="show-menu-btn" onclick="showMenu()" class="tef-menu" data-icon="menu"></button>
           <button id="hide-menu-btn" onclick="hideMenu()" class="tef-close" data-icon="close"></button>
-          <ul id="menu">
-            <li>Hello George!<i data-icon="user"></i></li>
-            <li><a href="">Help<i data-icon="help_circle"></i></a></li>
-            <li><a href="">Exit<i data-icon="close_circle"></i></a></li>
+          <ul id="menu" onclick="hideMenu()">
+            <li><span>Hello George!</span><i data-icon="user"></i></li>
+            <li><a href=""><span>Help</span><i data-icon="help_circle"></i></a></li>
+            <li><a href=""><span>Exit</span><i data-icon="close_circle"></i></a></li>
           </ul>
         </nav>
-        <h1>logo</h1>
-        <h2>Service</h2>
+        <h1><a href="/">Service name</a></h1>
+        <h2>Brand name</h2>
       </header>
+      <code>
+        <style>
+      <header class="tef-header">
+        <nav>
+          <button class="tef-menu" data-icon="menu"></button>
+          <button class="tef-close" data-icon="close"></button>
+          <ul>
+            <li><span>Hello George!</span><i data-icon="user"></i></li>
+            <li><a href=""><span>Help</span><i data-icon="help_circle"></i></a></li>
+            <li><a href=""><span>Exit</span><i data-icon="close_circle"></i></a></li>
+          </ul>
+        </nav>
+        <h1><a href="/">Service name</a></h1>
+        <h2>Brand name</h2>
+      </header>
+        </style>
+      </code>
     </div>
 
     <script>
@@ -76,18 +95,16 @@
       });
 
       var menu = document.getElementById('menu');
-      var showMenuBtn = document.getElementById('show-menu-btn');
       var hideMenuBtn = document.getElementById('hide-menu-btn');
 
       function showMenu() {
-        var currentClass = menu.getAttribute('class')
-        menu.setAttribute('class', currentClass + ' show');
+        menu.setAttribute('class','show');
+        hideMenuBtn.setAttribute('class','tef-close show');
       }
 
-      function closeMenu() {
-        var currentClass = menu.getAttribute('class')
-        menu.setAttribute('class', currentClass - ' show');
-        menu.setAttribute('class', currentClass - ' show');
+      function hideMenu() {
+        menu.setAttribute('class','');
+        hideMenuBtn.setAttribute('class','tef-close');
       }
     </script>
   </body>
