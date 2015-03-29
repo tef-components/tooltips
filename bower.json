@@ -1,11 +1,11 @@
 {
-  "name": "sidebars",
+  "name": "tooltips",
   "version": "0.2.12",
-  "homepage": "https://github.com/tef-components/sidebars",
+  "homepage": "https://github.com/tef-components/tooltips",
   "authors": [
     "the TEF components team"
   ],
-  "description": "TEF components - sidebars",
+  "description": "TEF components - tooltips",
   "main": "index.html",
   "license": "MIT",
   "ignore": [
@@ -18,6 +18,7 @@
     "bower_components"
   ],
   "dependencies": {
-    "utils": "tef-components/utils"
+    "utils": "tef-components/utils",
+    "icons": "tef-components/icons"
   }
 }

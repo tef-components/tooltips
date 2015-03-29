@@ -1,3 +1,3 @@
-# TEF sidebars
+# TEF tooltips
 
-Preview all sidebars: [http://tef-components.github.io/sidebars/index.html](http://tef-components.github.io/sidebars/index.html)
+Preview all tooltips: [http://tef-components.github.io/tooltips/index.html](http://tef-components.github.io/tooltips/index.html)
