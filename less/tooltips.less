@@ -1,67 +1,102 @@
 //
-// TEF components - tables
+// TEF components - tooltips
 //
 
 @import "../../utils/less/mixins.less";
 
-.tef-table {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 20px;
-    border-spacing: 0px;
-    border-collapse: collapse;
-    background-color: #fff;
-    color: #6f6f6f;
-    font-size: 14px;
-    line-height: 16px;
-    .box-sizing(border-box);
+.tef-tooltip {
+  position: relative;
+  display: inline-block;
+
+  &:before {
+    display: none;
+    position: absolute;
+    content: attr(data-text);
+    background-color: #31323b;
+    color: white;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 15px 23px;
+    border-radius: @radius;
+    max-width: 300px;
     text-align: left;
+    z-index: 50;
+  }
 
-    thead {
-        background-color: #f6f6f6;
-        border-top: 1px solid #dedede;
-        border-bottom: 1px solid #eaeaea;
-        text-transform: uppercase;
+  &:after {
+    display: none;
+    position: absolute;
+    content: "";
+    border: 8px solid transparent;
+    z-index: 50;
+  }
+
+  &.left {
+    &:before {
+      top: 50%;
+      left: 100%;
+      margin: -16px 0 0 8px;
     }
 
-    th {
-        padding: 20px;
+    &:after {
+      border-right: 8px solid #31323b;
+      top: 50%;
+      left: 100%;
+      margin: -8px 0 0 -8px;
+    }
+  }
+
+  &.right {
+    &:before {
+      top: 50%;
+      left: -100%;
+      margin: -16px 0 0 -8px;
     }
 
-    tbody tr {
-        border-bottom: 1px solid #eeeeee;
+    &:after {
+      border-left: 8px solid #31323b;
+      top: 50%;
+      left: -8px;
+      margin-top: -8px;
+    }
+  }
+
+  &.bottom {
+    &:before {
+      top: 100%;
+      left: 50%;
+      margin: 8px 0 0 -16px;
     }
 
-    td {
-        padding: 30px 20px;
+    &:after {
+      border-bottom: 8px solid #31323b;
+      left: 50%;
+      top: 100%;
+      margin: -8px 0 0 -8px;
+    }
+  }
+
+  &.top {
+    &:before {
+      bottom: 100%;
+      left: 50%;
+      margin: 0 0 8px -16px;
     }
 
-    a {
-        color: #6f6f6f;
+    &:after {
+      border-top: 8px solid #31323b;
+      left: 50%;
+      bottom: 100%;
+      margin: 0 0 -8px -8px;
     }
+  }
 
-    [data-icon]:before {
-        position: relative;
-        top: 2px;
-        font-size: 20px;
-        line-height: 16px;
+  &:hover,
+  &:focus,
+  &.active {
+    &:before,
+    &:after {
+      display: block;
     }
-
-    .media-min-md({
-        &.sh-zebra {
-            thead {
-                background-color: #fff;
-                border-bottom: 2px solid #bfbfbf;
-            }
-
-            th {
-                padding: 30px 20px;
-            }
-
-            tbody tr:nth-of-type(2n+1) {
-                background-color: #eee;
-                border-bottom-color: #e1e1e1;
-            }
-        }
-    });
+  }
 }
