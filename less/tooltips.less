@@ -44,20 +44,32 @@
       left: 100%;
       margin: -8px 0 0 -8px;
     }
+
+    &.reverse:before {
+      top: auto;
+      bottom: 50%;
+      margin: 0 0 -16px 8px;
+    }
   }
 
   &.right {
     &:before {
       top: 50%;
-      left: -100%;
-      margin: -16px 0 0 -8px;
+      right: 100%;
+      margin: -16px 8px 0 0;
     }
 
     &:after {
       border-left: 8px solid #31323b;
       top: 50%;
-      left: -8px;
-      margin-top: -8px;
+      right: 100%;
+      margin: -8px -8px 0 0;
+    }
+
+    &.reverse:before {
+      top: auto;
+      bottom: 50%;
+      margin: 0 8px -16px 0;
     }
   }
 
@@ -74,6 +86,12 @@
       top: 100%;
       margin: -8px 0 0 -8px;
     }
+
+    &.reverse:before {
+      right: 50%;
+      left: auto;
+      margin: 8px -16px 0 0;
+    }
   }
 
   &.top {
@@ -88,6 +106,12 @@
       left: 50%;
       bottom: 100%;
       margin: 0 0 -8px -8px;
+    }
+
+    &.reverse:before {
+      right: 50%;
+      left: auto;
+      margin: 0 -16px 8px 0;
     }
   }
 
