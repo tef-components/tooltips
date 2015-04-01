@@ -26,9 +26,11 @@
         overflow-y: auto;
         border-radius: 4px;
       }
-      .demo .tef-tooltip {
-        position: relative;
-        display: inline-block;
+      .demo {
+        padding: 55px 0;
+      }
+      .demo .tef-button {
+        padding: 20px 10px;
       }
     </style>
   </head>
@@ -50,7 +52,9 @@
         </div>
       </header>
 
-      <h2>Top</h2>
+      <h2>Default positions</h2>
+      <p>To add a tooltip we will need a container to wrap the element/s which will trigger the tooltip. The content of the tolltip should be inside a 'data-text' attribute.</p>
+      <h3>Top</h3>
       <div class="tef-center">
         <div class="tef-tooltip top" data-text="Tooltip top">
           <button class="tef-button">Roll over me!</button>
@@ -64,7 +68,7 @@
         </style>
       </code>
 
-      <h2>Right</h2>
+      <h3>Right</h3>
       <div class="tef-center">
         <div class="tef-tooltip right" data-text="Tooltip right">
           <button class="tef-button">Roll over me!</button>
@@ -72,13 +76,13 @@
       </div>
       <code>
         <style>
-      <div class="tef-tooltip top" data-text="Tooltip top">
+      <div class="tef-tooltip right" data-text="Tooltip right">
         <button class="tef-button">Roll over me!</button>
       </div>
         </style>
       </code>
 
-      <h2>Bottom</h2>
+      <h3>Bottom</h3>
       <div class="tef-center">
         <div class="tef-tooltip bottom" data-text="Tooltip bottom">
           <button class="tef-button">Roll over me!</button>
@@ -86,13 +90,13 @@
       </div>
       <code>
         <style>
-      <div class="tef-tooltip top" data-text="Tooltip top">
+      <div class="tef-tooltip bottom" data-text="Tooltip bottom">
         <button class="tef-button">Roll over me!</button>
       </div>
         </style>
       </code>
 
-      <h2>Left</h2>
+      <h3>Left</h3>
       <div class="tef-center">
         <div class="tef-tooltip left" data-text="Tooltip left">
           <button class="tef-button">Roll over me!</button>
@@ -100,11 +104,136 @@
       </div>
       <code>
         <style>
-      <div class="tef-tooltip top" data-text="Tooltip top">
+      <div class="tef-tooltip left" data-text="Tooltip left">
         <button class="tef-button">Roll over me!</button>
       </div>
         </style>
       </code>
+
+      <h2>Visible</h2>
+      <p>Adding an 'active' class, will show the tooltip.</p>
+      <div class="tef-center">
+        <div class="tef-tooltip right active" data-text="Tooltip right">
+          <button class="tef-button">Button</button>
+        </div>
+      </div>
+      <code>
+        <style>
+      <div class="tef-tooltip right active" data-text="Tooltip right">
+        <button class="tef-button">Roll over me!</button>
+      </div>
+        </style>
+      </code>
+
+      <h2>HTML content</h2>
+      <p>If you want to include HTML markup, you will need an extra container.</p>
+      <div class="tef-center">
+        <div class="tef-tooltip top">
+          <button class="tef-button">Roll over me!</button>
+          <div class="tef-tooltip-content">
+            <h2>Hi there!</h2>
+            <p>This is an <strong>HTML</strong> tooltip</p>
+          </div>
+        </div>
+      </div>
+      <code>
+        <style>
+      <div class="tef-tooltip top">
+        <button class="tef-button">Roll over me!</button>
+        <div class="tef-tooltip-content">
+          <h2>Hi there!</h2>
+          <p>This is an <strong>HTML</strong> tooltip</p>
+        </div>
+      </div>
+        </style>
+      </code>
+
+      <h2>All possible positions</h2>
+      <p>By default tooltips are centered to the target element. Use the classnames in the tooltips to get the desired position.</p>
+      <div class="tef-center demo">
+        <div class="tef-tooltip active left" data-text="left">
+          <button class="tef-button">Button 1</button>
+        </div>
+        <div class="tef-tooltip active top" data-text="top">
+          <button class="tef-button positive">Button 2</button>
+        </div>
+        <div class="tef-tooltip active bottom" data-text="bottom">
+          <button class="tef-button negative">Button 3</button>
+        </div>
+        <div class="tef-tooltip active right" data-text="right">
+          <button class="tef-button significant">Button 4</button>
+        </div>
+      </div>
+      <div class="tef-center demo">
+        <div class="tef-tooltip active start left" data-text="left start">
+          <button class="tef-button">Button 1</button>
+        </div>
+        <div class="tef-tooltip active start top" data-text="top start">
+          <button class="tef-button positive">Button 2</button>
+        </div>
+        <div class="tef-tooltip active start bottom" data-text="bottom start">
+          <button class="tef-button negative">Button 3</button>
+        </div>
+        <div class="tef-tooltip active start right" data-text="right start">
+          <button class="tef-button significant">Button 4</button>
+        </div>
+      </div>
+      <div class="tef-center demo">
+        <div class="tef-tooltip active end left" data-text="left end">
+          <button class="tef-button">Button 1</button>
+        </div>
+        <div class="tef-tooltip active end top" data-text="top end">
+          <button class="tef-button positive">Button 2</button>
+        </div>
+        <div class="tef-tooltip active end bottom" data-text="bottom end">
+          <button class="tef-button negative">Button 3</button>
+        </div>
+        <div class="tef-tooltip active end right" data-text="right end">
+          <button class="tef-button significant">Button 4</button>
+        </div>
+      </div>
+      <div class="tef-center demo">
+        <div class="tef-tooltip active reverse left" data-text="left reverse">
+          <button class="tef-button">Button 1</button>
+        </div>
+        <div class="tef-tooltip active reverse top" data-text="top reverse">
+          <button class="tef-button positive">Button 2</button>
+        </div>
+        <div class="tef-tooltip active reverse bottom" data-text="bottom reverse">
+          <button class="tef-button negative">Button 3</button>
+        </div>
+        <div class="tef-tooltip active reverse right" data-text="right reverse">
+          <button class="tef-button significant">Button 4</button>
+        </div>
+      </div>
+      <div class="tef-center demo">
+        <div class="tef-tooltip active reverse left start" data-text="left reverse start">
+          <button class="tef-button">Button 1</button>
+        </div>
+        <div class="tef-tooltip active reverse top start" data-text="top reverse start">
+          <button class="tef-button positive">Button 2</button>
+        </div>
+        <div class="tef-tooltip active reverse bottom start" data-text="bottom reverse start">
+          <button class="tef-button negative">Button 3</button>
+        </div>
+        <div class="tef-tooltip active reverse right start" data-text="right reverse start">
+          <button class="tef-button significant">Button 4</button>
+        </div>
+      </div>
+      <div class="tef-center demo">
+        <div class="tef-tooltip active reverse left end" data-text="left reverse end">
+          <button class="tef-button">Button 1</button>
+        </div>
+        <div class="tef-tooltip active reverse top end" data-text="top reverse end">
+          <button class="tef-button positive">Button 2</button>
+        </div>
+        <div class="tef-tooltip active reverse bottom end" data-text="bottom reverse end">
+          <button class="tef-button negative">Button 3</button>
+        </div>
+        <div class="tef-tooltip active reverse right end" data-text="right reverse end">
+          <button class="tef-button significant">Button 4</button>
+        </div>
+      </div>
     </div>
 
     <script>
