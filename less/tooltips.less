@@ -8,11 +8,11 @@
   position: relative;
   display: inline-block;
 
-  &[data-text]:before,
+  &[tooltip]:before,
   .tef-tooltip-content {
     display: none;
     position: absolute;
-    content: attr(data-text);
+    content: attr(tooltip);
     background-color: #31323b;
     color: white;
     font-size: 12px;
@@ -42,14 +42,14 @@
   }
 
   &.right {
-    &[data-text]:before,
+    &[tooltip]:before,
     .tef-tooltip-content {
       top: 50%;
       left: 100%;
       margin: -16px 0 0 8px;
     }
 
-    &[data-text].reverse:before,
+    &[tooltip].reverse:before,
     .reverse .tef-tooltip-content {
       top: auto;
       bottom: 50%;
@@ -64,10 +64,10 @@
     }
 
     &.start {
-      &[data-text]:before,
+      &[tooltip]:before,
       .tef-tooltip-content { top: 16px; }
 
-      &[data-text].reverse:before,
+      &[tooltip].reverse:before,
       .reverse .tef-tooltip-content {
         top: auto;
         bottom: 100%;
@@ -78,13 +78,13 @@
     }
 
     &.end {
-      &[data-text]:before,
+      &[tooltip]:before,
       .tef-tooltip-content {
         top: 100%;
         margin: -32px 0 0 8px;
       }
 
-      &[data-text].reverse:before,
+      &[tooltip].reverse:before,
       .reverse .tef-tooltip-content {
         top: auto;
         bottom: 0;
@@ -99,14 +99,14 @@
   }
 
   &.left {
-    &[data-text]:before,
+    &[tooltip]:before,
     .tef-tooltip-content {
       top: 50%;
       right: 100%;
       margin: -16px 8px 0 0;
     }
 
-    &[data-text].reverse:before,
+    &[tooltip].reverse:before,
     .reverse .tef-tooltip-content {
       top: auto;
       bottom: 50%;
@@ -121,10 +121,10 @@
     }
 
     &.start {
-      &[data-text]:before,
+      &[tooltip]:before,
       .tef-tooltip-content { top: 16px; }
 
-      &[data-text].reverse:before,
+      &[tooltip].reverse:before,
       .reverse .tef-tooltip-content {
         top: auto;
         bottom: 100%;
@@ -135,13 +135,13 @@
     }
 
     &.end {
-      &[data-text]:before,
+      &[tooltip]:before,
       .tef-tooltip-content {
         top: 100%;
         margin: -32px 8px 0 0;
       }
 
-      &[data-text].reverse:before,
+      &[tooltip].reverse:before,
       .reverse .tef-tooltip-content {
         top: auto;
         bottom: 0;
@@ -155,14 +155,14 @@
   }
 
   &.top {
-    &[data-text]:before,
+    &[tooltip]:before,
     .tef-tooltip-content {
       bottom: 100%;
       left: 50%;
       margin: 0 0 8px -16px;
     }
 
-    &[data-text].reverse:before,
+    &[tooltip].reverse:before,
     .reverse .tef-tooltip-content {
       right: 50%;
       left: auto;
@@ -177,10 +177,10 @@
     }
 
     &.start {
-      &[data-text]:before,
+      &[tooltip]:before,
       .tef-tooltip-content { left: 16px; }
 
-      &[data-text].reverse:before,
+      &[tooltip].reverse:before,
       .reverse .tef-tooltip-content {
         left: auto;
         right: 100%;
@@ -191,13 +191,13 @@
     }
 
     &.end {
-      &[data-text]:before,
+      &[tooltip]:before,
       .tef-tooltip-content {
         left: 100%;
         margin: 0 0 8px -32px;
       }
 
-      &[data-text].reverse:before,
+      &[tooltip].reverse:before,
       .reverse .tef-tooltip-content {
         left: auto;
         right: 0;
@@ -211,14 +211,14 @@
   }
 
   &.bottom {
-    &[data-text]:before,
+    &[tooltip]:before,
     .tef-tooltip-content {
       top: 100%;
       left: 50%;
       margin: 8px 0 0 -16px;
     }
 
-    &[data-text].reverse:before,
+    &[tooltip].reverse:before,
     .reverse .tef-tooltip-content {
       right: 50%;
       left: auto;
@@ -233,10 +233,10 @@
     }
 
     &.start {
-      &[data-text]:before,
+      &[tooltip]:before,
       .tef-tooltip-content { left: 16px; }
 
-      &[data-text].reverse:before,
+      &[tooltip].reverse:before,
       .reverse .tef-tooltip-content {
         left: auto;
         right: 100%;
@@ -247,13 +247,13 @@
     }
 
     &.end {
-      &[data-text]:before,
+      &[tooltip]:before,
       .tef-tooltip-content {
         left: 100%;
         margin: 8px 0 0 -32px;
       }
 
-      &[data-text].reverse:before,
+      &[tooltip].reverse:before,
       .reverse .tef-tooltip-content {
         left: auto;
         right: 0;
@@ -269,7 +269,7 @@
   &:hover,
   &:focus,
   &.active {
-    &[data-text]:before,
+    &[tooltip]:before,
     &:after,
     .tef-tooltip-content {
       display: block;
