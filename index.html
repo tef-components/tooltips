@@ -29,19 +29,19 @@
       .demo {
         padding: 55px 0;
       }
-      .demo .tef-button {
+      .demo .tc-button {
         padding: 20px 10px;
       }
     </style>
   </head>
 
   <body>
-    <div class="tef-wrapper tef-content">
+    <div class="tc-wrapper tc-content">
       <header columns="2 xs1">
         <h1>tooltips</h1>
         <div>
           <label>Change theme</label>
-          <div class="tef-dropdown" icon="angle_down">
+          <div class="tc-dropdown" icon="angle_down">
             <select id="themeSelector">
               <option value="telefonica">Telefónica</option>
               <option value="movistar">Movistar</option>
@@ -55,82 +55,82 @@
       <h2>Default positions</h2>
       <p>To add a tooltip we will need a container to wrap the element/s which will trigger the tooltip. The content of the tolltip should be inside a 'tooltip' attribute.</p>
       <h3>Top</h3>
-      <div class="tef-center">
-        <div class="tef-tooltip top" tooltip="Tooltip top">
-          <button class="tef-button">Roll over me!</button>
+      <div class="tc-center">
+        <div class="tc-tooltip top" tooltip="Tooltip top">
+          <button class="tc-button">Roll over me!</button>
         </div>
       </div>
       <code>
         <style>
-      <div class="tef-tooltip top" tooltip="Tooltip top">
-        <button class="tef-button">Roll over me!</button>
+      <div class="tc-tooltip top" tooltip="Tooltip top">
+        <button class="tc-button">Roll over me!</button>
       </div>
         </style>
       </code>
 
       <h3>Right</h3>
-      <div class="tef-center">
-        <div class="tef-tooltip right" tooltip="Tooltip right">
-          <button class="tef-button">Roll over me!</button>
+      <div class="tc-center">
+        <div class="tc-tooltip right" tooltip="Tooltip right">
+          <button class="tc-button">Roll over me!</button>
         </div>
       </div>
       <code>
         <style>
-      <div class="tef-tooltip right" tooltip="Tooltip right">
-        <button class="tef-button">Roll over me!</button>
+      <div class="tc-tooltip right" tooltip="Tooltip right">
+        <button class="tc-button">Roll over me!</button>
       </div>
         </style>
       </code>
 
       <h3>Bottom</h3>
-      <div class="tef-center">
-        <div class="tef-tooltip bottom" tooltip="Tooltip bottom">
-          <button class="tef-button">Roll over me!</button>
+      <div class="tc-center">
+        <div class="tc-tooltip bottom" tooltip="Tooltip bottom">
+          <button class="tc-button">Roll over me!</button>
         </div>
       </div>
       <code>
         <style>
-      <div class="tef-tooltip bottom" tooltip="Tooltip bottom">
-        <button class="tef-button">Roll over me!</button>
+      <div class="tc-tooltip bottom" tooltip="Tooltip bottom">
+        <button class="tc-button">Roll over me!</button>
       </div>
         </style>
       </code>
 
       <h3>Left</h3>
-      <div class="tef-center">
-        <div class="tef-tooltip left" tooltip="Tooltip left">
-          <button class="tef-button">Roll over me!</button>
+      <div class="tc-center">
+        <div class="tc-tooltip left" tooltip="Tooltip left">
+          <button class="tc-button">Roll over me!</button>
         </div>
       </div>
       <code>
         <style>
-      <div class="tef-tooltip left" tooltip="Tooltip left">
-        <button class="tef-button">Roll over me!</button>
+      <div class="tc-tooltip left" tooltip="Tooltip left">
+        <button class="tc-button">Roll over me!</button>
       </div>
         </style>
       </code>
 
       <h2>Visible</h2>
       <p>Adding an 'active' class, will show the tooltip.</p>
-      <div class="tef-center">
-        <div class="tef-tooltip right active" tooltip="Tooltip right">
-          <button class="tef-button">Button</button>
+      <div class="tc-center">
+        <div class="tc-tooltip right active" tooltip="Tooltip right">
+          <button class="tc-button">Button</button>
         </div>
       </div>
       <code>
         <style>
-      <div class="tef-tooltip right active" tooltip="Tooltip right">
-        <button class="tef-button">Roll over me!</button>
+      <div class="tc-tooltip right active" tooltip="Tooltip right">
+        <button class="tc-button">Roll over me!</button>
       </div>
         </style>
       </code>
 
       <h2>HTML content</h2>
       <p>If you want to include HTML markup, you will need an extra container.</p>
-      <div class="tef-center">
-        <div class="tef-tooltip top">
-          <button class="tef-button">Roll over me!</button>
-          <div class="tef-tooltip-content">
+      <div class="tc-center">
+        <div class="tc-tooltip top">
+          <button class="tc-button">Roll over me!</button>
+          <div class="tc-tooltip-content">
             <h2>Hi there!</h2>
             <p>This is an <strong>HTML</strong> tooltip</p>
           </div>
@@ -138,9 +138,9 @@
       </div>
       <code>
         <style>
-      <div class="tef-tooltip top">
-        <button class="tef-button">Roll over me!</button>
-        <div class="tef-tooltip-content">
+      <div class="tc-tooltip top">
+        <button class="tc-button">Roll over me!</button>
+        <div class="tc-tooltip-content">
           <h2>Hi there!</h2>
           <p>This is an <strong>HTML</strong> tooltip</p>
         </div>
@@ -150,88 +150,88 @@
 
       <h2>All possible positions</h2>
       <p>By default tooltips are centered to the target element. Use the classnames in the tooltips to get the desired position.</p>
-      <div class="tef-center demo">
-        <div class="tef-tooltip active left" tooltip="left">
-          <button class="tef-button">Button 1</button>
+      <div class="tc-center demo">
+        <div class="tc-tooltip active left" tooltip="left">
+          <button class="tc-button">Button 1</button>
         </div>
-        <div class="tef-tooltip active top" tooltip="top">
-          <button class="tef-button positive">Button 2</button>
+        <div class="tc-tooltip active top" tooltip="top">
+          <button class="tc-button positive">Button 2</button>
         </div>
-        <div class="tef-tooltip active bottom" tooltip="bottom">
-          <button class="tef-button negative">Button 3</button>
+        <div class="tc-tooltip active bottom" tooltip="bottom">
+          <button class="tc-button negative">Button 3</button>
         </div>
-        <div class="tef-tooltip active right" tooltip="right">
-          <button class="tef-button significant">Button 4</button>
-        </div>
-      </div>
-      <div class="tef-center demo">
-        <div class="tef-tooltip active start left" tooltip="left start">
-          <button class="tef-button">Button 1</button>
-        </div>
-        <div class="tef-tooltip active start top" tooltip="top start">
-          <button class="tef-button positive">Button 2</button>
-        </div>
-        <div class="tef-tooltip active start bottom" tooltip="bottom start">
-          <button class="tef-button negative">Button 3</button>
-        </div>
-        <div class="tef-tooltip active start right" tooltip="right start">
-          <button class="tef-button significant">Button 4</button>
+        <div class="tc-tooltip active right" tooltip="right">
+          <button class="tc-button significant">Button 4</button>
         </div>
       </div>
-      <div class="tef-center demo">
-        <div class="tef-tooltip active end left" tooltip="left end">
-          <button class="tef-button">Button 1</button>
+      <div class="tc-center demo">
+        <div class="tc-tooltip active start left" tooltip="left start">
+          <button class="tc-button">Button 1</button>
         </div>
-        <div class="tef-tooltip active end top" tooltip="top end">
-          <button class="tef-button positive">Button 2</button>
+        <div class="tc-tooltip active start top" tooltip="top start">
+          <button class="tc-button positive">Button 2</button>
         </div>
-        <div class="tef-tooltip active end bottom" tooltip="bottom end">
-          <button class="tef-button negative">Button 3</button>
+        <div class="tc-tooltip active start bottom" tooltip="bottom start">
+          <button class="tc-button negative">Button 3</button>
         </div>
-        <div class="tef-tooltip active end right" tooltip="right end">
-          <button class="tef-button significant">Button 4</button>
-        </div>
-      </div>
-      <div class="tef-center demo">
-        <div class="tef-tooltip active reverse left" tooltip="left reverse">
-          <button class="tef-button">Button 1</button>
-        </div>
-        <div class="tef-tooltip active reverse top" tooltip="top reverse">
-          <button class="tef-button positive">Button 2</button>
-        </div>
-        <div class="tef-tooltip active reverse bottom" tooltip="bottom reverse">
-          <button class="tef-button negative">Button 3</button>
-        </div>
-        <div class="tef-tooltip active reverse right" tooltip="right reverse">
-          <button class="tef-button significant">Button 4</button>
+        <div class="tc-tooltip active start right" tooltip="right start">
+          <button class="tc-button significant">Button 4</button>
         </div>
       </div>
-      <div class="tef-center demo">
-        <div class="tef-tooltip active reverse left start" tooltip="left reverse start">
-          <button class="tef-button">Button 1</button>
+      <div class="tc-center demo">
+        <div class="tc-tooltip active end left" tooltip="left end">
+          <button class="tc-button">Button 1</button>
         </div>
-        <div class="tef-tooltip active reverse top start" tooltip="top reverse start">
-          <button class="tef-button positive">Button 2</button>
+        <div class="tc-tooltip active end top" tooltip="top end">
+          <button class="tc-button positive">Button 2</button>
         </div>
-        <div class="tef-tooltip active reverse bottom start" tooltip="bottom reverse start">
-          <button class="tef-button negative">Button 3</button>
+        <div class="tc-tooltip active end bottom" tooltip="bottom end">
+          <button class="tc-button negative">Button 3</button>
         </div>
-        <div class="tef-tooltip active reverse right start" tooltip="right reverse start">
-          <button class="tef-button significant">Button 4</button>
+        <div class="tc-tooltip active end right" tooltip="right end">
+          <button class="tc-button significant">Button 4</button>
         </div>
       </div>
-      <div class="tef-center demo">
-        <div class="tef-tooltip active reverse left end" tooltip="left reverse end">
-          <button class="tef-button">Button 1</button>
+      <div class="tc-center demo">
+        <div class="tc-tooltip active reverse left" tooltip="left reverse">
+          <button class="tc-button">Button 1</button>
         </div>
-        <div class="tef-tooltip active reverse top end" tooltip="top reverse end">
-          <button class="tef-button positive">Button 2</button>
+        <div class="tc-tooltip active reverse top" tooltip="top reverse">
+          <button class="tc-button positive">Button 2</button>
         </div>
-        <div class="tef-tooltip active reverse bottom end" tooltip="bottom reverse end">
-          <button class="tef-button negative">Button 3</button>
+        <div class="tc-tooltip active reverse bottom" tooltip="bottom reverse">
+          <button class="tc-button negative">Button 3</button>
         </div>
-        <div class="tef-tooltip active reverse right end" tooltip="right reverse end">
-          <button class="tef-button significant">Button 4</button>
+        <div class="tc-tooltip active reverse right" tooltip="right reverse">
+          <button class="tc-button significant">Button 4</button>
+        </div>
+      </div>
+      <div class="tc-center demo">
+        <div class="tc-tooltip active reverse left start" tooltip="left reverse start">
+          <button class="tc-button">Button 1</button>
+        </div>
+        <div class="tc-tooltip active reverse top start" tooltip="top reverse start">
+          <button class="tc-button positive">Button 2</button>
+        </div>
+        <div class="tc-tooltip active reverse bottom start" tooltip="bottom reverse start">
+          <button class="tc-button negative">Button 3</button>
+        </div>
+        <div class="tc-tooltip active reverse right start" tooltip="right reverse start">
+          <button class="tc-button significant">Button 4</button>
+        </div>
+      </div>
+      <div class="tc-center demo">
+        <div class="tc-tooltip active reverse left end" tooltip="left reverse end">
+          <button class="tc-button">Button 1</button>
+        </div>
+        <div class="tc-tooltip active reverse top end" tooltip="top reverse end">
+          <button class="tc-button positive">Button 2</button>
+        </div>
+        <div class="tc-tooltip active reverse bottom end" tooltip="bottom reverse end">
+          <button class="tc-button negative">Button 3</button>
+        </div>
+        <div class="tc-tooltip active reverse right end" tooltip="right reverse end">
+          <button class="tc-button significant">Button 4</button>
         </div>
       </div>
     </div>

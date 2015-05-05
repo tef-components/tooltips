@@ -4,12 +4,12 @@
 
 @import "../../utils/less/mixins.less";
 
-.tef-tooltip {
+.tc-tooltip {
   position: relative;
   display: inline-block;
 
   &[tooltip]:before,
-  .tef-tooltip-content {
+  .tc-tooltip-content {
     display: none;
     position: absolute;
     content: attr(tooltip);
@@ -26,7 +26,7 @@
     word-break: break-word;
   }
 
-  .tef-tooltip-content {
+  .tc-tooltip-content {
     content: "";
     padding: 0 23px;
 
@@ -43,14 +43,14 @@
 
   &.right {
     &[tooltip]:before,
-    .tef-tooltip-content {
+    .tc-tooltip-content {
       top: 50%;
       left: 100%;
       margin: -16px 0 0 8px;
     }
 
     &[tooltip].reverse:before,
-    .reverse .tef-tooltip-content {
+    .reverse .tc-tooltip-content {
       top: auto;
       bottom: 50%;
       margin: 0 0 -16px 8px;
@@ -65,10 +65,10 @@
 
     &.start {
       &[tooltip]:before,
-      .tef-tooltip-content { top: 16px; }
+      .tc-tooltip-content { top: 16px; }
 
       &[tooltip].reverse:before,
-      .reverse .tef-tooltip-content {
+      .reverse .tc-tooltip-content {
         top: auto;
         bottom: 100%;
         margin: 0 0 -32px 8px;
@@ -79,13 +79,13 @@
 
     &.end {
       &[tooltip]:before,
-      .tef-tooltip-content {
+      .tc-tooltip-content {
         top: 100%;
         margin: -32px 0 0 8px;
       }
 
       &[tooltip].reverse:before,
-      .reverse .tef-tooltip-content {
+      .reverse .tc-tooltip-content {
         top: auto;
         bottom: 0;
         margin: 0 0 0 8px;
@@ -100,14 +100,14 @@
 
   &.left {
     &[tooltip]:before,
-    .tef-tooltip-content {
+    .tc-tooltip-content {
       top: 50%;
       right: 100%;
       margin: -16px 8px 0 0;
     }
 
     &[tooltip].reverse:before,
-    .reverse .tef-tooltip-content {
+    .reverse .tc-tooltip-content {
       top: auto;
       bottom: 50%;
       margin: 0 8px -16px 0;
@@ -122,10 +122,10 @@
 
     &.start {
       &[tooltip]:before,
-      .tef-tooltip-content { top: 16px; }
+      .tc-tooltip-content { top: 16px; }
 
       &[tooltip].reverse:before,
-      .reverse .tef-tooltip-content {
+      .reverse .tc-tooltip-content {
         top: auto;
         bottom: 100%;
         margin: 0 8px -32px 0;
@@ -136,13 +136,13 @@
 
     &.end {
       &[tooltip]:before,
-      .tef-tooltip-content {
+      .tc-tooltip-content {
         top: 100%;
         margin: -32px 8px 0 0;
       }
 
       &[tooltip].reverse:before,
-      .reverse .tef-tooltip-content {
+      .reverse .tc-tooltip-content {
         top: auto;
         bottom: 0;
       }
@@ -156,14 +156,14 @@
 
   &.top {
     &[tooltip]:before,
-    .tef-tooltip-content {
+    .tc-tooltip-content {
       bottom: 100%;
       left: 50%;
       margin: 0 0 8px -16px;
     }
 
     &[tooltip].reverse:before,
-    .reverse .tef-tooltip-content {
+    .reverse .tc-tooltip-content {
       right: 50%;
       left: auto;
       margin: 0 -16px 8px 0;
@@ -178,10 +178,10 @@
 
     &.start {
       &[tooltip]:before,
-      .tef-tooltip-content { left: 16px; }
+      .tc-tooltip-content { left: 16px; }
 
       &[tooltip].reverse:before,
-      .reverse .tef-tooltip-content {
+      .reverse .tc-tooltip-content {
         left: auto;
         right: 100%;
         margin: 0 -32px 8px 0;
@@ -192,13 +192,13 @@
 
     &.end {
       &[tooltip]:before,
-      .tef-tooltip-content {
+      .tc-tooltip-content {
         left: 100%;
         margin: 0 0 8px -32px;
       }
 
       &[tooltip].reverse:before,
-      .reverse .tef-tooltip-content {
+      .reverse .tc-tooltip-content {
         left: auto;
         right: 0;
       }
@@ -212,14 +212,14 @@
 
   &.bottom {
     &[tooltip]:before,
-    .tef-tooltip-content {
+    .tc-tooltip-content {
       top: 100%;
       left: 50%;
       margin: 8px 0 0 -16px;
     }
 
     &[tooltip].reverse:before,
-    .reverse .tef-tooltip-content {
+    .reverse .tc-tooltip-content {
       right: 50%;
       left: auto;
       margin: 8px -16px 0 0;
@@ -234,10 +234,10 @@
 
     &.start {
       &[tooltip]:before,
-      .tef-tooltip-content { left: 16px; }
+      .tc-tooltip-content { left: 16px; }
 
       &[tooltip].reverse:before,
-      .reverse .tef-tooltip-content {
+      .reverse .tc-tooltip-content {
         left: auto;
         right: 100%;
         margin: 8px -32px 0 0;
@@ -248,13 +248,13 @@
 
     &.end {
       &[tooltip]:before,
-      .tef-tooltip-content {
+      .tc-tooltip-content {
         left: 100%;
         margin: 8px 0 0 -32px;
       }
 
       &[tooltip].reverse:before,
-      .reverse .tef-tooltip-content {
+      .reverse .tc-tooltip-content {
         left: auto;
         right: 0;
       }
@@ -271,7 +271,7 @@
   &.active {
     &[tooltip]:before,
     &:after,
-    .tef-tooltip-content {
+    .tc-tooltip-content {
       display: block;
     }
   }
